@@ -21,4 +21,4 @@ app.post("/calcular", (req, res) => {
   return res.send({ resultado: "debes ingresar una operacion valida" });
 });
 
-export default  app ;
+export default app;
