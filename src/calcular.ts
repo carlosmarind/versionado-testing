@@ -18,3 +18,7 @@ export function sumar(num1: number, num2: number) {
 export function dividir(num1: number, num2: number) {
     return num1 / num2;
 }
+  export function potencia(base: number, exponente: number): number {
+        return Math.pow(base, exponente);
+
+}
