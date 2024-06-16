@@ -16,5 +16,10 @@ export function sumar(num1: number, num2: number) {
 }
 
 export function dividir(num1: number, num2: number) {
+    if(num1 === 0 || num2 === 0) {
+        throw new Error("No se puede dividir por 0");
+    }
     return num1 / num2;
 }
+
+

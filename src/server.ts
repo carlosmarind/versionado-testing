@@ -1,4 +1,5 @@
 import express from "express";
+import { sumar } from "./calcular"
 
 const app = express();
 app.use(express.json());
@@ -10,7 +11,7 @@ app.get("/", (req, res) => {
 app.post("/calcular", (req, res) => {
   const operacion = req.body;
   if (operacion.operacion === "add") {
-    return res.send({ resultado: operacion.num1 + operacion.num2 });
+    return res.send({ resultado: sumar(operacion.num1, operacion.num2) });
   } else if (operacion.operacion === "min") {
     return res.send({ resultado: operacion.num1 - operacion.num2 });
   } else if (operacion.operacion === "div") {
@@ -21,4 +22,6 @@ app.post("/calcular", (req, res) => {
   return res.send({ resultado: "debes ingresar una operacion valida" });
 });
 
-export default  app ;
+
+
+export default app;

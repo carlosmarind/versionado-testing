@@ -10,7 +10,12 @@ describe("calcular module", () => {
   });
 
   test("dividor 10 entre 2 es igual a 2", () => {
-    expect(dividir(10 ,5)).toBe(2);
+    expect(dividir(10, 5)).toBe(2);
+    expect(
+      () => {
+        dividir(10, 0)
+      })
+      .toThrowError("No se puede dividir por 0");
   });
 
   test("probar hola mundo", async () => {
